@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>only you my love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Crimson+Pro:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #e8c39e;
+            --rose: #d23c77;
+            --night: #1a0f1f;
+            --parchment: #f5eedc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background: url('https://images.unsplash.com/photo-1559563362-c667ba5f5480') fixed;
+            background-size: cover;
+            color: var(--night);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Animation de pétales */
+        .petals {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .petal {
+            position: absolute;
+            background: url('https://www.svgrepo.com/show/396134/rose-petal.svg');
+            width: 30px;
+            height: 30px;
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100%) rotate(0deg); }
+            100% { transform: translateY(200vh) rotate(360deg); }
+        }
+
+        /* En-tête romantique */
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            backdrop-filter: blur(3px);
+        }
+
+        h1 {
+            font-family: 'Parisienne', cursive;
+            font-size: 4.5rem;
+            color: var(--rose);
+            text-shadow: 3px 3px 0 var(--gold);
+            margin-bottom: 1rem;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Section poèmes */
+        .poem-container {
+            max-width: 800px;
+            margin: 5rem auto;
+            position: relative;
+        }
+
+        .poem {
+            background: linear-gradient(to bottom right, var(--parchment), #fff3e4);
+            padding: 3rem 4rem;
+            transform: rotate(-1deg);
+            box-shadow: 20px 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+            margin: 3rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .poem:hover {
+            transform: rotate(0.5deg) scale(1.02);
+        }
+
+        .poem::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background: url('https://www.svgrepo.com/show/354605/wax-seal.svg') no-repeat;
+            background-size: contain;
+            opacity: 0.7;
+        }
+
+        /* Formulaire de contact */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 5rem auto;
+            max-width: 500px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            font-family: inherit;
+        }
+
+        button {
+            background: var(--rose);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .poem { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Pétales animés -->
+    <div class="petals">
+        <div class="petal" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="petal" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="petal" style="left: 70%; animation-delay: 4s;"></div>
+    </div>
+
+    <header>
+        <div>
+            <h1>À Jasmine, mon éternité</h1>
+            <p class="subtitle">« Là où les mots finissent, commence notre histoire »</p>
+        </div>
+    </header>
+
+    <div class="poem-container">
+        <div class="poem">
+            <h2>Ton Regard</h2>
+            <p>
+                Tes yeux sont deux océans où l’aube se révèle,<br>
+                Miroirs d’un ciel lointain où dansent les secrets,<br>
+                Y flotte un arc-en-ciel que la nuit étincelle,<br>
+                Profondeurs où s’endort l’or des soleils muets.<br>
+                
+                Ambre et jade mêlés, éclats de feuilles vertes,<br>
+                Ils portent les échos d’un monde évanoui :<br>
+                Un éclair de tempête, une paix toujours offerte,<br>
+                L’infini capturé dans un geste infini.<br>
+                
+                Quand tu pleures, Jasmine, les étoiles se noient,<br>
+                L’univers retient son souffle, fragile et sans armes…<br>
+                Mais quand ton rire brille, l’ombre perd ses empois,<br>
+                Tes cils sont des pinceaux qui redessinent l’âme.<br>
+                
+                Garde ouverts ces deux puits où la lumière joue,<br>
+                Je m’y perds… et j’y trouve les dieux que je voue.
+            </p>
+        </div>
+
+        <div class="poem">
+            <h2>Jasmine, mon éternité</h2>
+            <p>
+                Jasmine, chaque battement de cœur murmure ton nom,<br>
+                Plus précieux qu’un ciel étoilé, plus doux qu’un chant de mai,<br>
+                Tu es la mélodie qui danse au-delà des saisons,<br>
+                L’aurore de mes nuits, le feu qui jamais ne s’éteint.<br>
+                
+                Tes mains sont les racines de l’arbre où je m’abrite,<br>
+                Ton souffle, une marée qui m’emporte sans effroi,<br>
+                En toi, j’ai découvert l’infini que l’on habite,<br>
+                Et l’univers entier tient dans le creux de tes doigts.<br>
+                
+                Quand tu parles, le temps se brise en étincelles,<br>
+                Tes silences sont des prières que je garde en secret,<br>
+                Aimer, c’est voir en toi toutes les tourterelles,<br>
+                Et chaque jour renaître au seuil de tes secrets.<br>
+                
+                Même si mille vies m’offraient leurs routes incertaines,<br>
+                Je choisirais toujours ton âme pour éternelle demeure,<br>
+                Car aimer Jasmine, c’est boire aux sources du mystère,<br>
+                C’est trouver dans l’azur un amour qui toujours demeure.
+            </p>
+        </div>
+
+        <div class="poem">
+            <h2>Chevelure d'Orion</h2>
+            <p>
+                Ô Jasmine, chevelure où la nuit se dépose,<br>
+                Toile d’araignée fine que le vent dénoue,<br>
+                Tes boucles sont des vagues où le soleil s’y pose,<br>
+                Cascade de soie noire où mes rêves se jouent.<br>
+                
+                Sous la lune, tes mèches sont des fils d’encre pure,<br>
+                Reflets d’un ciel d’orage aux éclats mystérieux,<br>
+                Chaque boucle murmure une douce blessure,<br>
+                Parfum de fleurs sauvages mêlé à tes aïeux.<br>
+                
+                Quand tu ris, l’orbe du jour s’efface sous tes tresses,<br>
+                Tes doigts glissent, légers, comme un poème écrit,<br>
+                Et dans ce mouvement, toutes mes ivresses<br>
+                Se perdent en éclats d’un infini maudit.<br>
+                
+                Jasmine, laisse-moi, dans l’ombre de tes voiles,<br>
+                Boire l’éternité cachée en tes étoiles.
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Écris-moi un mot doux</h2>
+        <form id="messageForm"> <!-- Ajout de l'ID manquant -->
+            <input type="text" id="senderName" placeholder="Ton nom" required>
+            <textarea id="messageContent" rows="5" placeholder="Ton message..." required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <div class="success-message" id="successMessage">Message envoyé direction mon cœur </div>
+        <div class="loading" id="loading">🌷</div>
+    </div>
+
+    <script>
+const DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/1358201771209658499/A4KrHb-VI3Z1Ag_DGPB9kzv3hU00MhvF8Pilx5wBZRwOBSUi_Kqb2UjTYJ7jFKbRNbL_'; // ← Remplacer ici
+
+async function sendToDiscord(messageData) {
+    const discordPayload = {
+        username: `${messageData.name || 'Anonyme'}`,
+        content: '`💌` ▸ **Nouveau message !**',
+        embeds: [{
+            title: `\`💌\` ▸ De la part de \`${messageData.name || 'Un admirateur secret'}\``,
+            description: `> __**${messageData.content}**__`,
+            color: 0xFF69B4, 
+            footer: {
+                text: 'only you my love'
+            }
+        }]
+    };
+
+    const response = await fetch(DISCORD_WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(discordPayload)
+    });
+
+    if (!response.ok) {
+        throw new Error(`Erreur Discord: ${response.status}`);
+    }
+}
+
+document.getElementById('messageForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    try {
+        loading.style.display = 'block';
+        await sendToDiscord({
+            name: document.getElementById('senderName').value,
+            content: document.getElementById('messageContent').value
+        });
+        
+        successMessage.style.display = 'block';
+        document.getElementById('messageForm').reset();
+        setTimeout(() => successMessage.style.display = 'none', 5000);
+    } catch (error) {
+        alert(`Erreur d'envoi: ${error.message}`);
+    } finally {
+        loading.style.display = 'none';
+    }
+});
+        function createPetals() {
+            const petalsContainer = document.querySelector('.petals');
+            for(let i = 0; i < 15; i++) {
+                const petal = document.createElement('div');
+                petal.className = 'petal';
+                petal.style.left = Math.random() * 100 + '%';
+                petal.style.animationDelay = Math.random() * 5 + 's';
+                petal.style.animationDuration = 5 + Math.random() * 5 + 's';
+                petalsContainer.appendChild(petal);
+            }
+        }
+        createPetals();
+        
+    </script>
+</body>
+</html>
